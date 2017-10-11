@@ -1,61 +1,100 @@
-\documentclass[12pt]{article}
-\usepackage[margin=2cm]{geometry}
+\documentclass[a4paper]{article}
+\usepackage[left=2cm,right=2cm,top=1cm,bottom=1cm]{geometry}
 \usepackage{graphicx}
 \usepackage{fontawesome}
 \usepackage{titlesec}
 \usepackage{xeCJK}
+\usepackage{tikz}
+\usepackage[OT1]{fontenc} 
+\usepackage{mathptmx}
+\usepackage{enumitem}
+%\usepackage{layout}
+%\usepackage{xcolor}
+
+%\definecolor{mygray}{gray}{.9}
+
+\newcommand{\mysec}[1]{%
+\begin{tikzpicture}[baseline=(a.base)]
+ \node[rounded corners=1ex,fill=gray!20] (a) {#1};
+\end{tikzpicture}
+}
+
 
 \setmainfont{Times New Roman}
-\setCJKmainfont{SimSun}
+\setCJKmainfont[BoldFont={SimHei}]{SimSun}
+\pagestyle{empty}
 
-\titleformat{\section}{\Large}{}{0em}{}[\titlerule] 
+\titleformat{\section}{\Large}{}{0em}{\mysec}[\vspace{0.5ex}\titlerule] 
+
+\setlength\parindent{0em}
 
 \begin{document}
+%\layout
 
 \newlength{\mycode}
 \newlength{\mycodet}
 \settowidth{\mycode}{Mail:bxg620@icloud.com}
 \settowidth{\mycodet}{individual CV}
 
-
-\noindent 
 \begin{minipage}[b]{\mycodet}
-\makebox[\mycodet][l]{\Huge 白旭光}\\[2ex]
+\makebox[\mycodet][l]{\Huge \bf 白旭光}\\[2ex]
 \makebox[\mycodet][l]{\large 个人简历}
 \end{minipage}
 \hfill
 \begin{minipage}[b]{\mycode}
 \makebox[\mycode][r]{\faPhone\,18200509859}\\
-\makebox[\mycode][r]{\faEnvelopeO\,bxg620@icloud.com}
+\makebox[\mycode][r]{\faEnvelopeO\,bxg620@live.com}
 \end{minipage}
 \hfil
 \begin{minipage}[b]{2.5cm}
 \includegraphics{potrait.JPG}
 \end{minipage}
 
-\vspace{1.5cm}
+\vspace{0.5cm}
 
 \section{求职意向}
-数据分析师
+技术服务
+
+\section{个人基本信息}
+\hspace{-9pt}
+\begin{tabular}{lll}
+出生日期：1994.9 & 籍\qquad 贯：山西保德 & 家庭所在地：山西保德 \\
+政治面貌：共青团员 & 最高学历：硕士研究生 & 研究方向：真空电子技术
+\end{tabular}
 
 \section{教育背景}
 2011-2015 桂林电子科技大学，光电信息工程本科\\
-2015-2017 电子科技大学，光学工程硕士，预计2018年6月底毕业
+2015-2017 电子科技大学，光学工程硕士，2018年6月底毕业
 
 \section{个人技能}
-CET4，CET6，计算机二级，掌握51单片机的应用，了解C/C++的基本语法，可通过ANSYS软件进行热学分析，可进行基本电子光学系统的仿真和设计 
+CET-4，CET-6\\
+计算机二级，掌握51单片机的应用，熟练掌握C/C++语言\\
+可通过ANSYS软件进行热力学分析\\
+可通过Opera3D软件进行基本电子光学系统的设计和仿真分析 
 
-\section{实践与经历}
-参与导师空心阴极设计与制作项目，独立负责系统的仿真分析
+\section{项目}
+\begin{itemize}[leftmargin=*]
+\item \textbf{项目名称}：空心阴极的设计与制作\\
+\textbf{起止时间}：2016.9-2017.10\\
+\textbf{项目背景}：用电推进来取代传统的化学推进使得小型在轨卫星的轨道调整和保持更加方便和经济\\
+\textbf{项目应用}：为电推进组件提供稳定的电子源，以促进放电室内的电离\\
+\textbf{知识背景}：阴极电子学，气体放电，等离子体，电动力学和热力学\\
+\textbf{个人负责内容}：器件的仿真分析。用ANSYS分析器件内热分布，计算不同结构下加热器的加热效率；用Opera3D软件仿真器件内的电场分布和电子的运动与分布。利用朗缪尔探针测试实验中羽流区的电子密度，分析放电的实际情况。
+\item \textbf{项目名称}：单晶LaB$_6$-FEA微观形貌调控与电子发射特性研究\\
+\textbf{起止时间}：2017.1-2017.12\\
+\textbf{项目应用}：制作用于微焦点电子枪的场发射阵列阴极\\
+\textbf{知识背景}：阴极电子学，光刻，电化学\\
+\textbf{个人负责内容}：硅掩蔽层的微米级光刻工艺。通过在单晶LaB$_6$基底的硅掩蔽层上进行光刻工艺来达到印制阵列形貌的目的。
+\end{itemize}
 
 \section{获奖情况}
-2015年研究生入学获三等奖学金
+2015年获三等学业奖学金
 
 \section{兴趣与爱好}
-动漫，电子游戏，Latex
+电子游戏，LaTeX
 
-\section{个人评价}
-性格较内向，学东西较慢，做事认真
+%\section{个人评价}
+%性格较内向，热爱生活，乐于助人，做事认真
 
 
 \end{document}
